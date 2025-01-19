@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("toss background.jpg") center/cover no-repeat;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.coin {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 2rem auto;
+  transform-style: preserve-3d;
+}
+
+.coin-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  background-size: cover;
+}
+
+.heads {
+  background: url("head coin.jpeg") center/cover no-repeat;
+  transform: rotateY(0deg);
+}
+
+.tails {
+  background: url("tail coin.png") center/cover no-repeat;
+  transform: rotateY(180deg);
+}
+
+.toss-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 1rem;
+  transition: background-color 0.3s;
+}
+
+.toss-btn:hover {
+  background-color: #45a049;
+}
+
+.choice-buttons {
+  display: none;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.choice-btn {
+  background-color: #2196f3;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.choice-btn:hover {
+  background-color: #1976d2;
+}
+
+.reset-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 1rem;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #d32f2f;
+}
+
+table {
+  margin: 1rem auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+@keyframes flip {
+  0% {
+    transform: translateY(0) rotateX(0);
+  }
+  40% {
+    transform: translateY(-200px) rotateX(720deg);
+  }
+  60% {
+    transform: translateY(-200px) rotateX(720deg);
+  }
+  80% {
+    transform: translateY(-200px) rotateX(720deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(1440deg);
+  }
+}
+
+.flipping {
+  animation: flip 4s ease-out;
+}
