@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Toss Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Virtual Coin Toss</h1>
+
+      <div class="coin">
+        <div class="coin-side heads"></div>
+        <div class="coin-side tails"></div>
+      </div>
+
+      <button class="toss-btn" onclick="startToss()">Toss Coin</button>
+
+      <div class="choice-buttons">
+        <p>Choose heads or tails:</p>
+        <button class="choice-btn" onclick="makeChoice('heads')">Heads</button>
+        <button class="choice-btn" onclick="makeChoice('tails')">Tails</button>
+      </div>
+
+      <p id="result"></p>
+
+      <table id="results-table">
+        <thead>
+          <tr>
+            <th>Toss</th>
+            <th>Result</th>
+            <th>Your Choice</th>
+            <th>Outcome</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <button class="reset-btn" onclick="resetResults()">Reset Results</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
